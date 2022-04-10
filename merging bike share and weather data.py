@@ -24,7 +24,7 @@ for i in range(len(weather_filenames1)):
     file = pd.read_csv(file_path)
     df_weather.append(file)
 weather_data1 = pd.concat(df_weather)
-#put datetime as index
+#set datetime as index
 weather_data1.index=pd.DatetimeIndex(weather_data1['Date/Time'])
 weather_data1=weather_data1.drop(columns=['Date/Time'])
 #localize datetime
@@ -49,7 +49,7 @@ for i in range(len(weather_filenames2)):
     file = pd.read_csv(file_path)
     df_weather.append(file)
 weather_data2 = pd.concat(df_weather)
-#put datetime as index
+#set datetime as index
 weather_data2.index=pd.DatetimeIndex(weather_data2['Date/Time'])
 weather_data2=weather_data2.drop(columns=['Date/Time'])
 #localize datetime
@@ -79,7 +79,7 @@ col_weather2=['Longitude (x)', 'Latitude (y)', 'Station Name', 'Climate ID',
        'Hmdx Flag', 'Wind Chill', 'Wind Chill Flag', 'Weather',
        'Precip. Amount (mm)', 'Precip. Amount Flag']
 weather_data3=weather_data3[col_weather2]
-#put datetime as index
+#set datetime as index
 weather_data3.index=pd.DatetimeIndex(weather_data3['Date/Time'])
 weather_data3=weather_data3.drop(columns=['Date/Time'])
 #localize datetime
