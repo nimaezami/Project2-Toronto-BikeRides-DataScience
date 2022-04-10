@@ -132,7 +132,8 @@ frames = [trips_data1,trips_data2,trips_data3,trips_data4]
 trips_data=pd.concat(frames)
 
 #changing dates to datetime format
-trips_data.trip_start_time=pd.to_datetime(trips_data.trip_start_time,utc=True)
+trips_data.trip_start_time=pd.to_datetime(trips_data.trip_start_time,utc=True).dt.tz_convert('EST')
+trips_data.merge_time=pd.to_datetime(trips_data.merge_time,utc=True).dt.tz_convert('EST')
 
 #standardization user_type values
 trips_data.loc[trips_data['user_type']=='Member','user_type']='Annual Member'
