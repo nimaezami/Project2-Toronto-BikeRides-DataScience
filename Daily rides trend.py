@@ -56,14 +56,3 @@ fig.suptitle('Daily ride counts for Casual Members and Annual Members')
 
 plt.show()
 
-#daily rides 2017-2021
-plt.figure(figsize=(10, 5))
-plt.plot(data_daily.index,data_daily['rides'])
-plt.plot(data_daily.index,data_daily['annual_members'])
-plt.plot(data_daily.index,data_daily['casual_members'])
-plt.xlabel('Date-Time')
-plt.ylabel("Weekly Trips")
-plt.title("Toronto city Daily Bike Rides 2017-2022")
-plt.legend(["rides", "annual_members","casual_members"])
-plt.show()
-
