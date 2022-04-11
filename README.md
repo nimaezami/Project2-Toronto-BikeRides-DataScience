@@ -1,1 +1,1 @@
-# Project-2-Toronto Bike share data science
+# Project 2-Toronto Bike Share Data Science
